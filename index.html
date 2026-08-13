@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio & Kumpulan Tugas Sekolah - Alin Khoiriyah</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Website portofolio sekolah interaktif dengan desain pastel pink yang elegan untuk mengumpulkan tugas Informatika dan Bahasa Indonesia.">
+  <meta name="keywords" content="portofolio sekolah, tugas sekolah, informatika, bahasa indonesia, siswa, pastel pink">
+  <meta name="author" content="Alin Khoiriyah">
+
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons for beautiful clean icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Music Player CSS -->
+  <link rel="stylesheet" href="css/player.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastel: {
+              pink: {
+                50: '#FFF5F5',
+                100: '#FFE3E3',
+                200: '#FFD1D1',
+                300: '#FFA4A4',
+                400: '#F48FB1',
+                500: '#7e0185', // primary brand pink
+                600: '#DB2777',
+              },
+              purple: {
+                50: '#FDF4FF',
+                100: '#F3E8FF',
+                200: '#E9D5FF',
+                300: '#D8B4FE',
+              },
+              blue: {
+                50: '#F0F9FF',
+                100: '#E0F2FE',
+                200: '#BAE6FD',
+              },
+              peach: {
+                50: '#FFF7ED',
+                100: '#FFEDD5',
+                200: '#FED7AA',
+              }
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'pastel': '0 8px 30px rgb(255, 227, 227, 0.4)',
+            'pastel-hover': '0 20px 40px rgb(255, 227, 227, 0.7)',
+            'glass': '0 8px 32px 0 rgba(236, 72, 153, 0.08)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="bg-gradient-to-tr from-pastel-pink-50 via-white to-pastel-purple-50 min-h-screen text-gray-700 relative overflow-x-hidden selection:bg-pastel-pink-200 selection:text-pastel-pink-600">
+
+  <!-- Background Decorative Elements -->
+  <div
+    class="absolute -top-20 -left-20 w-96 h-96 bg-pastel-pink-200/30 rounded-full blur-3xl animate-float-1 pointer-events-none z-0">
+  </div>
+  <div
+    class="absolute top-1/3 -right-20 w-96 h-96 bg-pastel-purple-200/30 rounded-full blur-3xl animate-float-2 pointer-events-none z-0">
+  </div>
+  <div
+    class="absolute bottom-10 left-10 w-80 h-80 bg-pastel-blue-100/40 rounded-full blur-3xl animate-float-1 pointer-events-none z-0">
+  </div>
+  <div
+    class="absolute bottom-1/3 right-1/4 w-72 h-72 bg-pastel-peach-100/30 rounded-full blur-3xl animate-float-2 pointer-events-none z-0">
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 glass-nav shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+
+        <!-- Logo / Name -->
+        <a href="index.html" class="flex items-center gap-2.5 group">
+          <div
+            class="w-10 h-10 rounded-full bg-gradient-to-tr from-pastel-pink-400 to-pastel-purple-300 flex items-center justify-center shadow-md shadow-pastel-pink-200 group-hover:scale-105 transition-transform duration-300">
+            <i data-lucide="flower" class="w-5 h-5 text-white"></i>
+          </div>
+          <div class="flex flex-col">
+            <span
+              class="font-extrabold text-lg text-gray-800 tracking-tight leading-none group-hover:text-pastel-pink-500 transition-colors duration-300">Alin
+              Khoiriyah</span>
+            <span class="text-xs text-pastel-pink-500 font-semibold tracking-wider uppercase mt-1">SMA Cinta Kasih Tzu
+              Chi</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex space-x-1 bg-pastel-pink-100/40 p-1.5 rounded-full border border-pastel-pink-100/50">
+          <a href="index.html" id="nav-dashboard"
+            class="nav-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 bg-white text-pastel-pink-500 shadow-sm border border-pastel-pink-100/20">
+            <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Dashboard
+          </a>
+          <a href="profil.html" id="nav-profil"
+            class="nav-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 text-gray-600 hover:text-pastel-pink-500">
+            <i data-lucide="user" class="w-4 h-4"></i> Profil
+          </a>
+          <a href="informatika.html" id="nav-informatika"
+            class="nav-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 text-gray-600 hover:text-pastel-pink-500">
+            <i data-lucide="code-2" class="w-4 h-4"></i> Informatika
+          </a>
+          <a href="bahasa-indonesia.html" id="nav-bahasaindonesia"
+            class="nav-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 text-gray-600 hover:text-pastel-pink-500">
+            <i data-lucide="book-open" class="w-4 h-4"></i> Bahasa Indonesia
+          </a>
+          <button id="nav-schedule" onclick="switchTab('schedule')"
+            class="nav-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 flex items-center gap-1.5 text-gray-600 hover:text-pastel-pink-500">
+            <i data-lucide="calendar" class="w-4 h-4"></i> Schedule
+          </button>
+        </nav>
+
+        <!-- Social Media Links (Desktop Only) -->
+        <div class="hidden lg:flex items-center gap-2.5">
+          <a href="https://instagram.com/floswey" target="_blank"
+            class="w-9 h-9 rounded-full bg-white border border-pastel-pink-100 flex items-center justify-center text-pastel-pink-400 hover:bg-pastel-pink-500 hover:text-white transition-all duration-300 shadow-sm hover:scale-105"
+            title="Instagram">
+            <i data-lucide="instagram" class="w-4.5 h-4.5"></i>
+          </a>
+          <a href="https://tiktok.com/@oyrrm" target="_blank"
+            class="w-9 h-9 rounded-full bg-white border border-pastel-pink-100 flex items-center justify-center text-red-400 hover:bg-red-500 hover:text-white transition-all duration-300 shadow-sm hover:scale-105"
+            title="tiktok">
+            <i data-lucide="tiktok" class="w-4.5 h-4.5"></i>
+          </a>
+          <a href="https://wa.me/6287885718845" target="_blank"
+            class="w-9 h-9 rounded-full bg-white border border-pastel-pink-100 flex items-center justify-center text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-sm hover:scale-105"
+            title="WhatsApp">
+            <i data-lucide="message-circle" class="w-4.5 h-4.5"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" onclick="toggleMobileMenu()"
+            class="w-10 h-10 rounded-full bg-pastel-pink-50 border border-pastel-pink-100 flex items-center justify-center text-pastel-pink-500 focus:outline-none focus:ring-2 focus:ring-pastel-pink-300">
+            <i id="menu-icon" data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu"
+      class="hidden md:hidden border-t border-pastel-pink-100 bg-white/95 backdrop-blur-md transition-all duration-300 px-4 py-4 space-y-2 shadow-inner">
+      <a href="index.html" onclick="toggleMobileMenu()"
+        class="w-full text-left px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-200 flex items-center gap-3 bg-pastel-pink-50 text-pastel-pink-500">
+        <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
+      </a>
+      <a href="profil.html" onclick="toggleMobileMenu()"
+        class="w-full text-left px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-200 flex items-center gap-3 text-gray-600 hover:bg-pastel-pink-50/50 hover:text-pastel-pink-500">
+        <i data-lucide="user" class="w-5 h-5"></i> Profil
+      </a>
+      <a href="informatika.html" onclick="toggleMobileMenu()"
+        class="w-full text-left px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-200 flex items-center gap-3 text-gray-600 hover:bg-pastel-pink-50/50 hover:text-pastel-pink-500">
+        <i data-lucide="code-2" class="w-5 h-5"></i> Informatika
+      </a>
+      <a href="bahasa-indonesia.html" onclick="toggleMobileMenu()"
+        class="w-full text-left px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-200 flex items-center gap-3 text-gray-600 hover:bg-pastel-pink-50/50 hover:text-pastel-pink-500">
+        <i data-lucide="book-open" class="w-5 h-5"></i> Bahasa Indonesia
+      </a>
+      <button onclick="switchTab('schedule'); toggleMobileMenu()"
+        class="w-full text-left px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-200 flex items-center gap-3 text-gray-600 hover:bg-pastel-pink-50/50 hover:text-pastel-pink-500">
+        <i data-lucide="calendar" class="w-5 h-5"></i> Schedule
+      </button>
+
+      <div class="pt-4 border-t border-pastel-pink-100 flex items-center justify-around">
+        <a href="https://instagram.com/floswey" target="_blank"
+          class="w-10 h-10 rounded-full bg-pastel-pink-50 flex items-center justify-center text-pastel-pink-400">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="https://tiktok.com/@oyrrm" target="_blank"
+          class="w-10 h-10 rounded-full bg-pastel-pink-50 flex items-center justify-center text-gray-600">
+          <i data-lucide="tiktok" class="w-5 h-5"></i>
+        </a>
+        <a href="https://wa.me/628123456789" target="_blank"
+          class="w-10 h-10 rounded-full bg-pastel-pink-50 flex items-center justify-center text-green-500">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative z-10">
+
+    <!-- ================= DASHBOARD SECTION ================= -->
+    <section id="dashboard-section" class="section-tab active-tab">
+
+      <!-- HERO HERO BANNER -->
+      <div
+        class="glass-card rounded-[2.5rem] p-8 sm:p-12 mb-10 shadow-glass flex flex-col-reverse lg:flex-row items-center justify-between gap-8 relative overflow-hidden border border-white/50">
+        <!-- Floating shapes in Banner -->
+        <div
+          class="absolute -right-10 -bottom-10 w-48 h-48 bg-pastel-pink-100 rounded-full opacity-60 pointer-events-none">
+        </div>
+        <div
+          class="absolute left-1/3 -top-12 w-24 h-24 bg-pastel-purple-100 rounded-full opacity-40 pointer-events-none">
+        </div>
+
+        <div class="max-w-2xl relative z-10 text-center lg:text-left">
+          <span
+            class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-pastel-pink-100/60 text-pastel-pink-600 rounded-full text-xs font-bold uppercase tracking-wider mb-5 border border-pastel-pink-200/50">
+            <span class="w-2 h-2 rounded-full bg-pastel-pink-500 animate-ping"></span>
+            <span id="day-greeting">Selamat Datang</span>
+          </span>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-800 tracking-tight leading-tight mb-4">
+            Halo! Aku <span
+              class="bg-gradient-to-r from-pastel-pink-500 to-pastel-purple-400 bg-clip-text text-transparent">Alin
+              Khoiriyah</span>
+          </h1>
+          <p class="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
+            Selamat datang di rumah digital kecilku! Di sini saya membagikan profil singkat diri saya, keahlian, serta
+            kumpulan tugas sekolah pilihan khususnya untuk mata pelajaran <strong
+              class="text-pastel-pink-500">Informatika</strong> dan <strong
+              class="text-pastel-pink-600 font-semibold">Bahasa Indonesia</strong>.
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="profil.html"
+              class="px-7 py-3.5 bg-gradient-to-r from-pastel-pink-500 to-pastel-pink-400 hover:from-pastel-pink-600 hover:to-pastel-pink-500 text-white rounded-2xl font-bold shadow-lg shadow-pastel-pink-100 hover:shadow-pastel-pink-200 transition-all duration-300 flex items-center gap-2 hover:scale-105">
+              <i data-lucide="user-check" class="w-5 h-5"></i> Kenal Lebih Dekat
+            </a>
+            <a href="informatika.html"
+              class="px-7 py-3.5 bg-white/80 hover:bg-white text-gray-700 hover:text-pastel-pink-500 border border-pastel-pink-100 rounded-2xl font-bold shadow-sm transition-all duration-300 flex items-center gap-2 hover:scale-105">
+              <i data-lucide="code" class="w-5 h-5"></i> Lihat Tugas
+            </a>
+          </div>
+        </div>
+
+        <div class="relative w-48 h-48 sm:w-64 sm:h-64 flex-shrink-0 z-10">
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-pastel-pink-200 to-pastel-purple-200 rounded-full animate-pulse blur-md">
+          </div>
+          <div
+            class="absolute inset-2 bg-white rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-inner"">
+           <img src=" assets/images/lin.jpeg" alt="Foto Alin Khoiriyah" class="w-full h-full object-cover">
+          </div>
+          <!-- Sparkles -->
+          <div class="absolute top-2 right-2 bg-pastel-pink-100/90 p-2 rounded-full shadow-sm text-pastel-pink-500">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- METRIC / STATS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10">
+
+        <div
+          class="glass-card p-5 sm:p-6 rounded-3xl border border-white/50 flex items-center gap-4 hover:scale-103 transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-2xl bg-pastel-pink-100 text-pastel-pink-500 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="files" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="block text-2xl font-extrabold text-gray-800">8+</span>
+            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Koleksi Tugas</span>
+          </div>
+        </div>
+
+        <div
+          class="glass-card p-5 sm:p-6 rounded-3xl border border-white/50 flex items-center gap-4 hover:scale-103 transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-2xl bg-pastel-purple-100 text-pastel-purple-500 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="block text-2xl font-extrabold text-gray-800">SMA</span>
+            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Tingkat Pendidikan</span>
+          </div>
+        </div>
+
+        <div
+          class="glass-card p-5 sm:p-6 rounded-3xl border border-white/50 flex items-center gap-4 hover:scale-103 transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-2xl bg-pastel-blue-100 text-pastel-blue-500 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span class="block text-2xl font-extrabold text-gray-800">100%</span>
+            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Karya Orisinil</span>
+          </div>
+        </div>
+
+        <div
+          class="glass-card p-5 sm:p-6 rounded-3xl border border-white/50 flex items-center gap-4 hover:scale-103 transition-all duration-300">
+          <div
+            class="w-12 h-12 rounded-2xl bg-pastel-peach-100 text-pastel-peach-500 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span id="mood-label" class="block text-lg font-bold text-gray-800">Happy</span>
+            <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">Mood Hari Ini</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= MUSIC PLAYER SECTION ================= -->
+      <section id="music-player-section" class="mb-10">
+        <div class="music-player-card p-6 sm:p-8 relative overflow-hidden border border-white/60">
+
+          <!-- Background Glow Decoration -->
+          <div
+            class="absolute -top-16 -right-16 w-48 h-48 bg-pastel-pink-200/40 rounded-full blur-3xl pointer-events-none">
+          </div>
+          <div
+            class="absolute -bottom-16 -left-16 w-48 h-48 bg-pastel-purple-200/40 rounded-full blur-3xl pointer-events-none">
+          </div>
+
+          <!-- Section Header -->
+          <div
+            class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-pastel-pink-100/60 relative z-10">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pastel-pink-400 to-pastel-purple-400 text-white flex items-center justify-center shadow-sm">
+                <i data-lucide="music" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-extrabold text-gray-800 tracking-tight flex items-center gap-2">
+                  Music Player <span
+                    class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-pastel-pink-100 text-pastel-pink-600">Now
+                    Playing</span>
+                </h3>
+                <p class="text-xs text-gray-500">Putar musik favorit saat menjelajahi portofolio</p>
+              </div>
+            </div>
+
+            <!-- Header Actions: Login status badge & Embed Toggle -->
+            <div class="flex flex-wrap items-center gap-2">
+              <span id="spotify-user-status"
+                class="px-3 py-1 bg-pastel-pink-100 text-pastel-pink-600 rounded-full text-xs font-bold">
+                Mode Offline (Demo Tracks)
+              </span>
+              <button id="spotify-login-btn"
+                class="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl text-xs transition-all shadow-sm flex items-center gap-1.5">
+                <i data-lucide="log-in" class="w-4 h-4"></i> Login with Spotify
+              </button>
+              <button id="spotify-embed-toggle-btn"
+                class="px-3.5 py-2 bg-white/80 hover:bg-white text-gray-600 hover:text-pastel-pink-500 border border-pastel-pink-100 font-bold rounded-xl text-xs transition-all shadow-xs">
+                Buka Spotify Embed Player
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Player Display Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center relative z-10">
+
+            <!-- Left / Disc & Track Info (5 Cols) -->
+            <div class="md:col-span-5 flex items-center gap-4">
+              <!-- Spinning Album Cover Vinyl -->
+              <div id="player-cover-wrapper" class="album-cover-wrapper">
+                <img id="player-cover-img" src="assets/images/justin.jpg" alt="Beauty And A Beat Cover"
+                  class="album-cover-img">
+              </div>
+
+              <!-- Track Metadata -->
+              <div class="space-y-1.5 overflow-hidden flex-1">
+                <div class="flex items-center justify-between">
+                  <span id="player-track-album"
+                    class="text-[10px] font-extrabold uppercase tracking-wider text-pastel-pink-500 truncate block max-w-[150px]">Believe
+                    (Pastel Edition)</span>
+                  <!-- Visualizer Animation -->
+                  <div class="visualizer-container">
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                  </div>
+                </div>
+
+                <h4 id="player-track-title"
+                  class="text-base sm:text-lg font-extrabold text-gray-800 leading-tight truncate">Beauty And A Beat
+                </h4>
+                <p id="player-track-artist" class="text-xs text-gray-500 font-medium truncate">Justin Bieber ft. Nicki
+                  Minaj</p>
+              </div>
+            </div>
+
+            <!-- Center / Audio Controls & Progress (7 Cols) -->
+            <div class="md:col-span-7 space-y-3">
+
+              <!-- Progress Bar & Timer -->
+              <div class="space-y-1">
+                <input type="range" id="player-progress-bar" min="0" value="0" step="1" class="music-slider">
+                <div class="flex items-center justify-between text-[11px] font-semibold text-gray-400 px-1">
+                  <span id="player-current-time">00:00</span>
+                  <span id="player-duration-time">02:25</span>
+                </div>
+              </div>
+
+              <!-- Control Buttons Bar -->
+              <div class="flex items-center justify-between gap-2 pt-1">
+
+                <!-- Shuffle & Repeat -->
+                <div class="flex items-center gap-1">
+                  <button id="player-shuffle-btn" title="Shuffle"
+                    class="player-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-400 hover:text-pastel-pink-500 hover:bg-pastel-pink-50">
+                    <i data-lucide="shuffle" class="w-4 h-4"></i>
+                  </button>
+                  <button id="player-repeat-btn" title="Repeat"
+                    class="player-btn w-8 h-8 rounded-full flex items-center justify-center text-gray-400 hover:text-pastel-pink-500 hover:bg-pastel-pink-50">
+                    <i data-lucide="repeat" class="w-4 h-4"></i>
+                  </button>
+                </div>
+
+                <!-- Main Play Controls (Prev, Play/Pause, Next) -->
+                <div class="flex items-center gap-3">
+                  <button id="player-prev-btn" title="Previous Track"
+                    class="player-btn w-9 h-9 rounded-full bg-white border border-pastel-pink-100 flex items-center justify-center text-gray-700 hover:text-pastel-pink-500 shadow-xs">
+                    <i data-lucide="skip-back" class="w-4.5 h-4.5"></i>
+                  </button>
+                  <button id="player-play-btn" title="Play / Pause"
+                    class="player-btn w-12 h-12 rounded-full bg-gradient-to-tr from-pastel-pink-500 to-pastel-pink-400 text-white flex items-center justify-center shadow-md shadow-pastel-pink-200 hover:scale-105">
+                    <i id="player-play-icon" data-lucide="play" class="w-6 h-6 fill-current"></i>
+                  </button>
+                  <button id="player-next-btn" title="Next Track"
+                    class="player-btn w-9 h-9 rounded-full bg-white border border-pastel-pink-100 flex items-center justify-center text-gray-700 hover:text-pastel-pink-500 shadow-xs">
+                    <i data-lucide="skip-forward" class="w-4.5 h-4.5"></i>
+                  </button>
+                </div>
+
+                <!-- Volume Slider -->
+                <div class="flex items-center gap-1.5 w-28 sm:w-32">
+                  <i data-lucide="volume-2" class="w-4 h-4 text-pastel-pink-400 flex-shrink-0"></i>
+                  <input type="range" id="player-volume-slider" min="0" max="100" value="80" class="music-slider">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Bottom Playlist Track List -->
+          <div class="mt-6 pt-4 border-t border-pastel-pink-100/60 relative z-10">
+            <h4 class="text-xs font-extrabold uppercase tracking-wider text-gray-500 mb-3 flex items-center gap-1.5">
+              <i data-lucide="list-music" class="w-4 h-4 text-pastel-pink-500"></i> Playlist Favorit
+            </h4>
+            <div id="player-playlist-container" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <!-- Rendered dynamically by player.js -->
+            </div>
+          </div>
+
+          <!-- Spotify iFrame Embed Container Fallback -->
+          <div id="spotify-embed-container"
+            class="hidden mt-6 pt-4 border-t border-pastel-pink-100/60 relative z-10 transition-all">
+            <div class="rounded-2xl overflow-hidden shadow-inner border border-pastel-pink-100 bg-white/50">
+              <iframe id="spotify-embed-iframe" src="" width="100%" height="152" frameborder="0" allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MAIN METRICS + QUICK TASKS ROW -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+
+        <!-- Left 2 Cols: Recent Tasks Grid -->
+        <div class="lg:col-span-2 space-y-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+              <i data-lucide="clock" class="w-6 h-6 text-pastel-pink-400"></i> Tugas Terpopuler
+            </h2>
+            <a href="informatika.html"
+              class="text-sm font-semibold text-pastel-pink-500 hover:text-pastel-pink-600 flex items-center gap-1 group transition-colors">
+              Lihat Semua <i data-lucide="arrow-right"
+                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="popular-tasks-container">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- Right 1 Col: Small interactive items (Quote & Mood Changer) -->
+        <div class="space-y-6">
+
+          <!-- Quote of the Day -->
+          <div
+            class="glass-card p-6 sm:p-8 rounded-[2rem] border border-white/50 relative overflow-hidden bg-gradient-to-b from-white/80 to-pastel-pink-50/40">
+            <i data-lucide="quote"
+              class="absolute right-6 top-6 w-16 h-16 text-pastel-pink-100 pointer-events-none"></i>
+            <h3 class="text-xs font-extrabold text-pastel-pink-500 tracking-wider uppercase mb-3">Kata Mutiara</h3>
+            <p class="text-gray-600 italic leading-relaxed mb-4 relative z-10" id="quote-text">
+              "Pendidikan bukan cuma soal pergi ke sekolah dan mendapatkan gelar. Tapi, juga soal memperluas pengetahuan
+              kita dan menyerap ilmu kehidupan."
+            </p>
+            <span class="text-sm font-bold text-gray-800 block">— Shakuntala Devi</span>
+          </div>
+
+          <!-- Interactive Mood Selector -->
+          <div class="glass-card p-6 sm:p-8 rounded-[2rem] border border-white/50">
+            <h3 class="text-xs font-extrabold text-pastel-pink-500 tracking-wider uppercase mb-3">Bagaimana Perasaanmu
+              Hari Ini?</h3>
+            <p class="text-xs text-gray-500 mb-4">Setel mood Anda di website saya:</p>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="setMood('Happy', '😊')"
+                class="py-2.5 rounded-2xl bg-white border border-pastel-pink-100 hover:border-pastel-pink-300 text-lg transition-transform hover:scale-105 flex flex-col items-center justify-center gap-1 shadow-sm"
+                title="Happy">
+                <span>😊</span>
+                <span class="text-[10px] font-semibold text-gray-500">Happy</span>
+              </button>
+              <button onclick="setMood('Studious', '✍️')"
+                class="py-2.5 rounded-2xl bg-white border border-pastel-pink-100 hover:border-pastel-pink-300 text-lg transition-transform hover:scale-105 flex flex-col items-center justify-center gap-1 shadow-sm"
+                title="Studious">
+                <span>✍️</span>
+                <span class="text-[10px] font-semibold text-gray-500">Belajar</span>
+              </button>
+              <button onclick="setMood('Creative', '🎨')"
+                class="py-2.5 rounded-2xl bg-white border border-pastel-pink-100 hover:border-pastel-pink-300 text-lg transition-transform hover:scale-105 flex flex-col items-center justify-center gap-1 shadow-sm"
+                title="Creative">
+                <span>🎨</span>
+                <span class="text-[10px] font-semibold text-gray-500">Kreatif</span>
+              </button>
+              <button onclick="setMood('Sleepy', '🥱')"
+                class="py-2.5 rounded-2xl bg-white border border-pastel-pink-100 hover:border-pastel-pink-300 text-lg transition-transform hover:scale-105 flex flex-col items-center justify-center gap-1 shadow-sm"
+                title="Sleepy">
+                <span>🥱</span>
+                <span class="text-[10px] font-semibold text-gray-500">Ngantuk</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick School Info -->
+          <div class="glass-card p-6 rounded-[2rem] border border-white/50 space-y-3.5">
+            <h3 class="text-xs font-extrabold text-pastel-pink-500 tracking-wider uppercase">Info Sekolah</h3>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-pastel-blue-100 text-pastel-blue-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-4.5 h-4.5"></i>
+              </div>
+              <span class="text-sm font-semibold text-gray-700">SMA Cinta Kasih Tzu Chi</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-8 h-8 rounded-lg bg-pastel-purple-100 text-pastel-purple-500 flex items-center justify-center flex-shrink-0">
+                <i data-lucide="book-open" class="w-4.5 h-4.5"></i>
+              </div>
+              <span class="text-sm font-semibold text-gray-700">Kelas XI.3</span>
+            </div>
+            <button onclick="switchTab('schedule')"
+              class="mt-2 w-full py-2 bg-pastel-pink-100/80 hover:bg-pastel-pink-500 text-pastel-pink-600 hover:text-white rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 border border-pastel-pink-200/50 shadow-2xs">
+              <i data-lucide="calendar" class="w-4 h-4"></i> Lihat Jadwal Pelajaran XI-3
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Mini Game Section in Dashboard -->
+      <div class="mt-10">
+        <!-- Section Header with Game Selector -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+          <div>
+            <span
+              class="px-4 py-1.5 bg-pastel-pink-100 text-pastel-pink-600 rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block">
+              🎮 Mini Game Zone
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800">Game Hub Pastel</h2>
+            <p class="text-xs sm:text-sm text-gray-500">Pilih dan mainkan 3 game mini seru buatan Alin di bawah ini!</p>
+          </div>
+
+          <!-- Game Selector Tabs -->
+          <div
+            class="inline-flex flex-wrap p-1.5 bg-pastel-pink-100/60 rounded-2xl border border-pastel-pink-100 gap-1 shadow-inner">
+            <button id="game-tab-memory" onclick="switchDashboardGame('memory')"
+              class="game-tab-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 bg-pastel-pink-500 text-white shadow-md flex items-center gap-2">
+              <i data-lucide="brain-circuit" class="w-4 h-4"></i> Memory Match 🌸
+            </button>
+            <button id="game-tab-tictactoe" onclick="switchDashboardGame('tictactoe')"
+              class="game-tab-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 text-gray-600 hover:text-pastel-pink-500 bg-white/60 flex items-center gap-2">
+              <i data-lucide="grid" class="w-4 h-4"></i> Tic-Tac-Toe 🎀
+            </button>
+            <button id="game-tab-catcher" onclick="switchDashboardGame('catcher')"
+              class="game-tab-btn px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 text-gray-600 hover:text-pastel-pink-500 bg-white/60 flex items-center gap-2">
+              <i data-lucide="zap" class="w-4 h-4"></i> Tangkap Emoji 🐰
+            </button>
+          </div>
+        </div>
+
+        <!-- Game Containers -->
+        <div id="game-container-memory" class="dashboard-game-view">
+          <div class="pastel-game-container"></div>
+        </div>
+
+        <div id="game-container-tictactoe" class="dashboard-game-view hidden">
+          <div class="pastel-tictactoe-container"></div>
+        </div>
+
+        <div id="game-container-catcher" class="dashboard-game-view hidden">
+          <div class="pastel-catcher-container"></div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ================= SCHEDULE SECTION ================= -->
+    <section id="schedule-section" class="section-tab">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span
+          class="px-4 py-1.5 bg-pastel-pink-100 text-pastel-pink-600 rounded-full text-xs font-bold uppercase tracking-wider mb-3.5 inline-block">Jadwal
+          & Agenda</span>
+        <h2 class="text-3xl font-extrabold text-gray-800 mb-3">Schedule</h2>
+        <p class="text-gray-500">Halaman jadwal mata pelajaran sekolah (XI-3) dan jadwal aktivitas pribadi.</p>
+      </div>
+
+      <!-- Sub-section Navigation / Toggle Buttons -->
+      <div class="flex justify-center mb-10">
+        <div
+          class="inline-flex p-1.5 bg-pastel-pink-100/50 rounded-2xl border border-pastel-pink-100/60 shadow-inner gap-1">
+          <button id="subtab-btn-lesson" onclick="switchScheduleSubtab('lesson')"
+            class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 bg-pastel-pink-500 text-white shadow-md flex items-center gap-2">
+            <i data-lucide="book-marked" class="w-4 h-4"></i> LESSON SCHEDULE
+          </button>
+          <button id="subtab-btn-my" onclick="switchScheduleSubtab('my')"
+            class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 text-gray-600 hover:text-pastel-pink-500 bg-white/60 flex items-center gap-2">
+            <i data-lucide="coffee" class="w-4 h-4"></i> MY SCHEDULE
+          </button>
+        </div>
+      </div>
+
+      <!-- 1. LESSON SCHEDULE CONTAINER -->
+      <div id="lesson-schedule-container" class="space-y-8">
+        <div class="glass-card rounded-[2.5rem] p-6 sm:p-8 border border-white/60 shadow-sm">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-pastel-pink-100 mb-6">
+            <div>
+              <span
+                class="px-3.5 py-1 bg-pastel-pink-100 text-pastel-pink-600 rounded-full text-xs font-extrabold tracking-wider uppercase inline-block mb-2">
+                SMA Cinta Kasih Tzu Chi &bull; TP 2026/2027
+              </span>
+              <h3 class="text-2xl font-extrabold text-gray-800 tracking-tight">LESSON SCHEDULE (Kelas XI-3)</h3>
+              <p class="text-xs text-gray-500 mt-1">Jadwal resmi mata pelajaran semester ganjil khusus kelas XI-3</p>
+            </div>
+
+            <!-- Day Filter Buttons -->
+            <div class="flex flex-wrap gap-2" id="schedule-day-filter">
+              <button onclick="filterSchedule('Semua')"
+                class="sched-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all border border-pastel-pink-100 bg-pastel-pink-500 text-white shadow-xs">Semua</button>
+              <button onclick="filterSchedule('Senin')"
+                class="sched-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all border border-pastel-pink-100 bg-white text-gray-600 hover:bg-pastel-pink-50 hover:text-pastel-pink-500 shadow-xs">Senin</button>
+              <button onclick="filterSchedule('Selasa')"
+                class="sched-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all border border-pastel-pink-100 bg-white text-gray-600 hover:bg-pastel-pink-50 hover:text-pastel-pink-500 shadow-xs">Selasa</button>
+              <button onclick="filterSchedule('Rabu')"
+                class="sched-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all border border-pastel-pink-100 bg-white text-gray-600 hover:bg-pastel-pink-50 hover:text-pastel-pink-500 shadow-xs">Rabu</button>
+              <button onclick="filterSchedule('Kamis')"
+                class="sched-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all border border-pastel-pink-100 bg-white text-gray-600 hover:bg-pastel-pink-50 hover:text-pastel-pink-500 shadow-xs">Kamis</button>
+              <button onclick="filterSchedule('Jumat')"
+                class="sched-filter-btn px-4 py-2 rounded-full text-xs font-bold transition-all border border-pastel-pink-100 bg-white text-gray-600 hover:bg-pastel-pink-50 hover:text-pastel-pink-500 shadow-xs">Jum'at</button>
+            </div>
+          </div>
+
+          <!-- Schedule Cards Output Grid -->
+          <div id="schedule-container" class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Rendered via JS -->
+          </div>
+
+          <!-- Master Teachers List Accordion -->
+          <div class="mt-8 pt-6 border-t border-pastel-pink-100">
+            <button onclick="toggleTeacherList()"
+              class="flex items-center justify-between w-full p-4 rounded-2xl bg-pastel-pink-50/70 hover:bg-pastel-pink-100/50 border border-pastel-pink-100 text-left transition-all">
+              <div class="flex items-center gap-2.5 text-pastel-pink-600 font-bold text-sm">
+                <i data-lucide="users" class="w-4 h-4"></i>
+                <span>Daftar Kode Guru Pengajar (KD 1 - 29)</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-pastel-pink-500 font-semibold">
+                <span id="teacher-toggle-text">Buka Daftar</span>
+                <i id="teacher-toggle-icon" data-lucide="chevron-down"
+                  class="w-4 h-4 transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div id="teacher-list-container"
+              class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mt-4 text-xs">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. MY SCHEDULE CONTAINER -->
+      <div id="my-schedule-container" class="hidden">
+        <div
+          class="glass-card rounded-[2.5rem] p-8 sm:p-12 text-center border border-white/60 shadow-sm max-w-3xl mx-auto relative overflow-hidden">
+          <div
+            class="absolute -right-12 -top-12 w-40 h-40 bg-pastel-pink-200/30 rounded-full blur-2xl pointer-events-none">
+          </div>
+          <div
+            class="absolute -left-12 -bottom-12 w-40 h-40 bg-pastel-purple-200/30 rounded-full blur-2xl pointer-events-none">
+          </div>
+
+          <div
+            class="w-20 h-20 rounded-3xl bg-gradient-to-tr from-pastel-pink-400 to-pastel-purple-300 mx-auto flex items-center justify-center text-white shadow-lg shadow-pastel-pink-200 mb-6 group hover:scale-110 transition-transform">
+            <i data-lucide="coffee" class="w-10 h-10"></i>
+          </div>
+
+          <span
+            class="px-4 py-1.5 bg-pastel-pink-100 text-pastel-pink-600 rounded-full text-xs font-extrabold tracking-wider uppercase inline-block mb-3">
+            MY SCHEDULE
+          </span>
+
+          <h3 class="text-4xl sm:text-5xl font-extrabold text-gray-800 tracking-tight mb-4">Kosong</h3>
+
+          <p class="text-base text-gray-600 max-w-md mx-auto leading-relaxed mb-6">
+            Saat ini tidak ada agenda kegiatan pribadi karena sedang nganggur / santai ☕✨
+          </p>
+
+          <div
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl bg-pastel-pink-50/80 border border-pastel-pink-100 text-xs font-semibold text-pastel-pink-600 shadow-xs">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Mode Santai & Rehat Sejenak
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white/80 border-t border-pastel-pink-100/50 py-10 mt-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2.5 mb-2">
+            <div class="w-8 h-8 rounded-full bg-pastel-pink-400 flex items-center justify-center">
+              <i data-lucide="flower" class="w-4 h-4 text-white"></i>
+            </div>
+            <span class="font-extrabold text-base text-gray-800">Alin Khoiriyah</span>
+          </div>
+          <p class="text-xs text-gray-500">Website portofolio sekolah dengan sentuhan pastel pink. Selamat berkarya!</p>
+        </div>
+
+        <!-- Social Media Links (Footer) -->
+        <div class="flex items-center gap-3">
+          <a href="https://instagram.com/floswey" target="_blank"
+            class="w-8 h-8 rounded-lg bg-pastel-pink-50 text-pastel-pink-400 hover:bg-pastel-pink-500 hover:text-white flex items-center justify-center transition-all shadow-sm">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a href="https://tiktok.com/@oyrrm" target="_blank"
+            class="w-8 h-8 rounded-lg bg-pastel-pink-50 text-gray-600 hover:bg-gray-800 hover:text-white flex items-center justify-center transition-all shadow-sm">
+            <i data-lucide="tiktok" class="w-4 h-4"></i>
+          </a>
+          <a href="https://wa.me/6287885718845" target="_blank"
+            class="w-8 h-8 rounded-lg bg-pastel-pink-50 text-green-500 hover:bg-green-500 hover:text-white flex items-center justify-center transition-all shadow-sm">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="text-xs text-gray-400 text-center md:text-right">
+          &copy; 2026 Alin Khoiriyah. | SMA Cinta Kasih Tzu Chi
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- TASK DETAIL MODAL -->
+  <div id="task-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+    <!-- Backdrop -->
+    <div onclick="closeModal()" class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm transition-opacity"></div>
+
+    <!-- Modal Content Box -->
+    <div
+      class="glass-card rounded-[2.5rem] w-full max-w-3xl overflow-hidden shadow-2xl relative z-10 max-h-[85vh] flex flex-col border border-white/60 animate-scale-up">
+
+      <!-- Close Button -->
+      <button onclick="closeModal()"
+        class="absolute right-5 top-5 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-gray-700 flex items-center justify-center border border-pastel-pink-100 shadow-sm z-20 focus:outline-none transition-all">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Image Cover (For visuals) -->
+      <div class="relative h-48 sm:h-64 flex-shrink-0 bg-pastel-pink-100 overflow-hidden">
+        <img id="modal-cover-img" src="" alt="Cover Tugas" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <span id="modal-badge"
+            class="px-3 py-1 bg-pastel-pink-500 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-2 inline-block"></span>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-extrabold text-white leading-tight"></h3>
+        </div>
+      </div>
+
+      <!-- Modal Info / Body (Scrollable) -->
+      <div class="p-6 sm:p-8 overflow-y-auto space-y-6 flex-grow">
+        <div
+          class="flex flex-wrap items-center justify-between text-xs text-gray-500 gap-2 pb-4 border-b border-pastel-pink-100/50">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Dibuat: <strong id="modal-date"></strong></span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="user" class="w-4 h-4"></i>
+            <span>Guru Pengampu: <strong id="modal-teacher"></strong></span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-extrabold text-gray-800 text-sm tracking-wider uppercase mb-2">Deskripsi Tugas:</h4>
+          <p id="modal-description" class="text-sm text-gray-600 leading-relaxed"></p>
+        </div>
+
+        <div id="modal-content-container">
+          <!-- Dynamically inserted Rich Content (e.g. essay paragraphs or coding block) -->
+        </div>
+
+        <!-- Download & Links Action -->
+        <div class="pt-6 border-t border-pastel-pink-100 flex flex-wrap gap-3">
+          <a id="modal-action-btn" href="#"
+            class="px-5 py-2.5 bg-pastel-pink-500 hover:bg-pastel-pink-600 text-white font-bold rounded-xl text-sm shadow-md shadow-pastel-pink-100 hover:shadow-pastel-pink-200 transition-all flex items-center gap-1.5">
+            <i data-lucide="external-link" class="w-4.5 h-4.5"></i> Lihat Hasil
+          </a>
+          <button onclick="closeModal()"
+            class="px-5 py-2.5 bg-white border border-pastel-pink-100 text-gray-600 hover:bg-pastel-pink-50 hover:text-pastel-pink-500 font-bold rounded-xl text-sm transition-all">
+            Tutup
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script src="js/script.js"></script>
+
+  <!-- MUSIC PLAYER LOGIC -->
+  <script src="js/config.js"></script>
+  <script src="js/spotify.js"></script>
+  <script src="js/player.js"></script>
+
+  <!-- PASTEL MINI GAME LOGIC -->
+  <script src="js/game.js"></script>
+</body>
+
+</html>
